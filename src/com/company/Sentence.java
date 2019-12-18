@@ -11,6 +11,7 @@ public class Sentence {
 
     /** Returns a string containing the current sentence. */
     public String toString() {
+
         return currSent;
     }
 
@@ -45,10 +46,13 @@ public class Sentence {
      *
      */
    public void replaceNthTime(String str, int n, String repl) {
-        if(findNthTime(str, n) != -1){
-            char a = currSent.charAt(findNthTime(str, n));
-            currSent = currSent.replace(str, n);
-        }
+       String  =
+       int x = findNthTime(str, n);
+       if(x != -1){
+            String a = currSent.substring(0, x) + repl + str.length();
+        } else {
+           return;
+       }
    }
 
     /** Returns the index of the last occurrence of str in the current sentence:
