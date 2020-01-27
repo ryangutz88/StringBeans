@@ -7,15 +7,24 @@ public class ErrorLog {
 
     /** Precondition: message is a valid Error log entry */
     public ErrorLog(String message) {
-        /* part a */
+            int x = message.indexOf(":");
+            machineId = message.substring(0,x);
+            description = message.substring(x + 1);
     }
 
     /** Returns true if the description in this error log entry
      * contains keyword; false otherwise.
      */
-    //public boolean containsKey(String keyword) {
-        /* part b */
-    //}
+    public boolean containsKey(String keyword) {
+        int x = description.indexOf(keyword);
+        if (x >= 0) {
+            return true;
+        }
+
+    if(x <= description.lastIndexOf()) {
+
+    }
+    }
 
     public String getMachineId() { return machineId;}
     public String getDescription() { return description; }
